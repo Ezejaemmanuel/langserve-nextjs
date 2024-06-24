@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nlux/langchain-react": "^2.7.7",
+    "@nlux/react": "^2.7.7",
+    "@nlux/themes": "^2.7.7",
     "ai": "^3.2.5",
     "langchain": "^0.1.26",
     "next": "14.1.3",

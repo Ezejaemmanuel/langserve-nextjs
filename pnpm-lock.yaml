@@ -5,6 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@nlux/langchain-react':
+    specifier: ^2.7.7
+    version: 2.7.7(@nlux/react@2.7.7)(react@18.3.1)
+  '@nlux/react':
+    specifier: ^2.7.7
+    version: 2.7.7(react-dom@18.3.1)(react@18.3.1)
+  '@nlux/themes':
+    specifier: ^2.7.7
+    version: 2.7.7
   ai:
     specifier: ^3.2.5
     version: 3.2.5(react@18.3.1)(solid-js@1.8.17)(svelte@4.2.18)(vue@3.4.29)(zod@3.23.8)
@@ -790,6 +799,42 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@nlux/core@2.7.7:
+    resolution: {integrity: sha512-XRIeUvSmHjpHWRj2z4ITGr7knkK32fGiqMXO2UEXHnrBS37pKQGZo+H8Escal4UVGngtOFwKKy+0ExjJAUbeSQ==}
+    dev: false
+
+  /@nlux/langchain-react@2.7.7(@nlux/react@2.7.7)(react@18.3.1):
+    resolution: {integrity: sha512-9cpzEZNSPBZoBwqZ2Dcw6ZCYSL24PN7FOg4hiiawZUG7h4rf1/mYweOjktZ426b7bTjf4Qg48ML3Af88aGNwKw==}
+    peerDependencies:
+      '@nlux/react': 2.7.7
+      react: ^18
+    dependencies:
+      '@nlux/langchain': 2.7.7
+      '@nlux/react': 2.7.7(react-dom@18.3.1)(react@18.3.1)
+      react: 18.3.1
+    dev: false
+
+  /@nlux/langchain@2.7.7:
+    resolution: {integrity: sha512-ydoAuJ1aR4IY6b6UeCLgUhrUQCJnSh7Fm8M3lFbPE87rqS3ph3hrQy0sPUOnCFbEoLE1NDXTEkl3Z+4O8T3ejQ==}
+    dependencies:
+      '@nlux/core': 2.7.7
+    dev: false
+
+  /@nlux/react@2.7.7(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-goquNw8H8z/88NZ4R6sIwIHudjoOhWPtEEm1nH1g6gtXcxbP9m+EO3drwOr7fx9DVc+voX1bhS8DPRUds4Iy5g==}
+    peerDependencies:
+      react: ^18
+      react-dom: ^18
+    dependencies:
+      '@nlux/core': 2.7.7
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    dev: false
+
+  /@nlux/themes@2.7.7:
+    resolution: {integrity: sha512-W5Tcoomudiw+cHWiTaN+Dw+OIsCToEBVfUYf5lLpcnuhJxP6HsUt4JyjGtwTS0I9Iwm36mlsNM5HRtkpxwohpA==}
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
