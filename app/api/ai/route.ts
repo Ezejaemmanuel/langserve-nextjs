@@ -21,12 +21,19 @@ interface RequestBody {
 async function* makeIterator(input: string, config: Config) {
   console.log("makeIterator called with input:", input, "and config:", config);  // makeIterator called
 
-  const langserveUrl = "http://127.0.0.1:9090/ai/ask-question";
+  // const langserveUrl = "https://my-rabbai-be.onrender.com/ai/ask-question"
+  const langserveUrl = "http://localhost:9090/ai/ask-question"
   // const langserveUrl = "http://localhost:9090"
   console.log("langserveUrl:", langserveUrl);  // langserveUrl
-
+  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMmJhYzk5NS0wNDFmLTQ0YTktYmYxMC0xZGQyZGQ2MGM0NGQiLCJleHAiOjE3MTk2Nzc2MTZ9.aLc15uv5OILSIjjZGl21Rehl__dNRdE6XgDDg_jMmHM"
   const chain = new RemoteRunnable({
     url: langserveUrl,
+    options: {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    }
+
   });
   console.log("RemoteRunnable created with url:", langserveUrl);  // RemoteRunnable created
 
